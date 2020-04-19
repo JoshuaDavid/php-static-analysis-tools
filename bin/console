@@ -3,10 +3,12 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use Stan\Commands\FindUsagesCommand;
 use Stan\Services\AutowireContainer;
 use Symfony\Component\Console\Application;
 
 $commandClassess = [
+    FindUsagesCommand::class,
 ];
 
 AutowireContainer::boot();
