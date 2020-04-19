@@ -1,0 +1,11 @@
+{
+    "name": "joshua-david/php-static-analysis-tools",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua David",
+            "email": "Joshua@Joshua-David.net"
+        }
+    ],
+    "require": {}
+}
