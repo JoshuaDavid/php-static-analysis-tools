@@ -1,0 +1,19 @@
+#!/usr/bin/php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Stan\Services\AutowireContainer;
+use Symfony\Component\Console\Application;
+
+$commandClassess = [
+];
+
+AutowireContainer::boot();
+AutowireContainer::autowireClasses($commandClassess);
+
+$app = new Application;
+foreach ($commandClassess as $commandClass) {
+    $app->add(AutowireContainer::get($commandClass));
+}
+$app->run();
